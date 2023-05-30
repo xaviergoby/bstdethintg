@@ -1,0 +1,36 @@
+{
+  "data": {
+    "270": {
+      "id": 270,
+      "name": "Binance",
+      "slug": "binance",
+      "num_coins": 132,
+      "num_market_pairs": 385,
+      "last_updated": "2018-11-08T22:11:00.000Z",
+      "traffic_score": 1000,
+      "rank": 1,
+      "exchange_score": 9.8028,
+      "liquidity_score": 9.8028,
+      "quote": {
+        "USD": {
+          "volume_24h": 768478308.529847,
+          "volume_24h_adjusted": 768478308.529847,
+          "volume_7d": 3666423776,
+          "volume_30d": 21338299776,
+          "percent_change_volume_24h": -11.8232,
+          "percent_change_volume_7d": 67.0306,
+          "percent_change_volume_30d": -0.0821558,
+          "effective_liquidity_24h": 629.9774
+        }
+      }
+    }
+  },
+  "status": {
+    "timestamp": "2023-04-06T18:58:24.810Z",
+    "error_code": 0,
+    "error_message": "",
+    "elapsed": 10,
+    "credit_count": 1
+  }
+
+}

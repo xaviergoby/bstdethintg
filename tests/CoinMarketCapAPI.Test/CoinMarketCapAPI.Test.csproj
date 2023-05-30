@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\v1-cryptocurrency-listings-latest.json" />
+    <None Remove="Resources\v1-cryptocurrency-map.json" />
+    <None Remove="Resources\v1-exchange-info.json" />
+    <None Remove="Resources\v1-exchange-listings-latest.json" />
+    <None Remove="Resources\v1-exchange-market-pairs-latest.json" />
+    <None Remove="Resources\v1-exchange-quotes-historical.json" />
+    <None Remove="Resources\v1-exchange-quotes-latest.json" />
+    <None Remove="Resources\v1-global-metrics-quotes-historical.json" />
+    <None Remove="Resources\v1-global-metrics-quotes-latest.json" />
+    <None Remove="Resources\v2-cryptocurrency-info.json" />
+    <None Remove="Resources\v2-cryptocurrency-market-pairs-latest.json" />
+    <None Remove="Resources\v2-cryptocurrency-ohlcv-historical.json" />
+    <None Remove="Resources\v2-cryptocurrency-ohlcv-latest.json" />
+    <None Remove="Resources\v2-cryptocurrency-quotes-historical.json" />
+    <None Remove="Resources\v2-cryptocurrency-quotes-latest.json" />
+    <None Remove="Resources\v2-tools-price-conversion.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\v1-cryptocurrency-listings-latest.json" />
+    <EmbeddedResource Include="Resources\v1-cryptocurrency-map.json" />
+    <EmbeddedResource Include="Resources\v1-exchange-info.json" />
+    <EmbeddedResource Include="Resources\v1-exchange-listings-latest.json" />
+    <EmbeddedResource Include="Resources\v1-exchange-market-pairs-latest.json" />
+    <EmbeddedResource Include="Resources\v1-exchange-quotes-historical.json" />
+    <EmbeddedResource Include="Resources\v1-exchange-quotes-latest.json" />
+    <EmbeddedResource Include="Resources\v1-global-metrics-quotes-historical.json" />
+    <EmbeddedResource Include="Resources\v1-global-metrics-quotes-latest.json" />
+    <EmbeddedResource Include="Resources\v2-cryptocurrency-info.json" />
+    <EmbeddedResource Include="Resources\v2-cryptocurrency-market-pairs-latest.json" />
+    <EmbeddedResource Include="Resources\v2-cryptocurrency-ohlcv-historical.json" />
+    <EmbeddedResource Include="Resources\v2-cryptocurrency-ohlcv-latest.json" />
+    <EmbeddedResource Include="Resources\v2-cryptocurrency-quotes-historical.json" />
+    <EmbeddedResource Include="Resources\v2-cryptocurrency-quotes-latest.json" />
+    <EmbeddedResource Include="Resources\v2-tools-price-conversion.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.2.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CoinMarketCapAPI\CoinMarketCapAPI.csproj" />
+  </ItemGroup>
+
+</Project>

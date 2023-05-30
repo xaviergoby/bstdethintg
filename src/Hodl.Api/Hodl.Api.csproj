@@ -1,0 +1,112 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	<LangVersion>10</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>f8c8c87d-e327-4d22-9901-aaedf31dd8e3</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Product>Hodl Trading Desk</Product>
+    <Copyright>Copyright (C) Hodl Management b.v. 2022. All rights reserved.</Copyright>
+    <Company>Hodl Management b.v.</Company>
+    <Authors>C. Karreman</Authors>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <Configurations>Debug;Release;Staging</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Staging|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\ExternalAccountsModels\**" />
+    <Compile Remove="ViewModels\ExternalAccounts\**" />
+    <Content Remove="ViewModels\ExternalAccountsModels\**" />
+    <Content Remove="ViewModels\ExternalAccounts\**" />
+    <EmbeddedResource Remove="ViewModels\ExternalAccountsModels\**" />
+    <EmbeddedResource Remove="ViewModels\ExternalAccounts\**" />
+    <None Remove="ViewModels\ExternalAccountsModels\**" />
+    <None Remove="ViewModels\ExternalAccounts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\crypto-bitcoin.png" />
+    <None Remove="Resources\Images\crypto-bnb.png" />
+    <None Remove="Resources\Images\crypto-eth.png" />
+    <None Remove="Resources\Images\crypto-usdt.png" />
+    <None Remove="Resources\Images\exchange-binance.png" />
+    <None Remove="Resources\Images\exchange-c2c.png" />
+    <None Remove="Resources\Images\exchange-huobi.png" />
+    <None Remove="Resources\Images\exchange-kucoin.png" />
+    <None Remove="Resources\Images\exchange-pancakeswap.png" />
+    <None Remove="Resources\Images\exchange-uniswap.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\crypto-bitcoin.png" />
+    <EmbeddedResource Include="Resources\Images\crypto-bnb.png" />
+    <EmbeddedResource Include="Resources\Images\crypto-eth.png" />
+    <EmbeddedResource Include="Resources\Images\crypto-usdt.png" />
+    <EmbeddedResource Include="Resources\Images\exchange-binance.png" />
+    <EmbeddedResource Include="Resources\Images\exchange-c2c.png" />
+    <EmbeddedResource Include="Resources\Images\exchange-huobi.png" />
+    <EmbeddedResource Include="Resources\Images\exchange-kucoin.png" />
+    <EmbeddedResource Include="Resources\Images\exchange-pancakeswap.png" />
+    <EmbeddedResource Include="Resources\Images\exchange-uniswap.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Discord.Net" Version="3.10.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.60.0" />
+    <PackageReference Include="GoogleAuthenticator" Version="3.1.0" />
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5" />
+	<PackageReference Include="NETCore.Encrypt" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+    <PackageReference Include="QuestPDF" Version="2023.4.2" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.1" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hodl.ExchangeAPI.Binance\Hodl.ExchangeAPI.Binance.csproj" />
+    <ProjectReference Include="..\Hodl.ExchangeAPI.Kucoin\Hodl.ExchangeAPI.Kucoin.csproj" />
+    <ProjectReference Include="..\Hodl.ExchangeAPI\Hodl.ExchangeAPI.csproj" />
+    <ProjectReference Include="..\Hodl.ExplorerAPI\Hodl.ExplorerAPI.csproj" />
+    <ProjectReference Include="..\Hodl.Framework\Hodl.Framework.csproj" />
+    <ProjectReference Include="..\Hodl.MarketAPI\Hodl.MarketAPI.csproj" />
+  </ItemGroup>
+
+    <ItemGroup>
+	    <EmbeddedResource Update="Resources\Utils.Errors.ErrorHandlingMiddleware.resx">
+		    <Generator></Generator>
+	    </EmbeddedResource>
+	    <EmbeddedResource Update="Resources\Utils.Services.EmailService.resx">
+	      <Generator></Generator>
+	    </EmbeddedResource>
+    </ItemGroup>
+
+</Project>

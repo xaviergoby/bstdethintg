@@ -1,0 +1,110 @@
+{
+  "coins": [
+    {
+      "item": {
+        "id": "arbitrum",
+        "coin_id": 16547,
+        "name": "Arbitrum",
+        "symbol": "ARB",
+        "market_cap_rank": 32,
+        "thumb": "https://assets.coingecko.com/coins/images/16547/thumb/photo_2023-03-29_21.47.00.jpeg?1680097630",
+        "small": "https://assets.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg?1680097630",
+        "large": "https://assets.coingecko.com/coins/images/16547/large/photo_2023-03-29_21.47.00.jpeg?1680097630",
+        "slug": "arbitrum",
+        "price_btc": 0.00005818463163852671,
+        "score": 0
+      }
+    },
+    {
+      "item": {
+        "id": "xen-crypto",
+        "coin_id": 27713,
+        "name": "XEN Crypto",
+        "symbol": "XEN",
+        "market_cap_rank": 352,
+        "thumb": "https://assets.coingecko.com/coins/images/27713/thumb/Xen.jpeg?1665453190",
+        "small": "https://assets.coingecko.com/coins/images/27713/small/Xen.jpeg?1665453190",
+        "large": "https://assets.coingecko.com/coins/images/27713/large/Xen.jpeg?1665453190",
+        "slug": "xen-crypto",
+        "price_btc": 2.951497282628365e-10,
+        "score": 1
+      }
+    },
+    {
+      "item": {
+        "id": "tominet",
+        "coin_id": 28730,
+        "name": "tomiNet",
+        "symbol": "TOMI",
+        "market_cap_rank": 214,
+        "thumb": "https://assets.coingecko.com/coins/images/28730/thumb/logo_for_token.png?1673690005",
+        "small": "https://assets.coingecko.com/coins/images/28730/small/logo_for_token.png?1673690005",
+        "large": "https://assets.coingecko.com/coins/images/28730/large/logo_for_token.png?1673690005",
+        "slug": "tominet",
+        "price_btc": 0.00009946587865921011,
+        "score": 2
+      }
+    },
+    {
+      "item": {
+        "id": "media-licensing-token",
+        "coin_id": 15659,
+        "name": "Media Licensing Token",
+        "symbol": "MLT",
+        "market_cap_rank": 669,
+        "thumb": "https://assets.coingecko.com/coins/images/15659/thumb/milc_200x200.png?1621511031",
+        "small": "https://assets.coingecko.com/coins/images/15659/small/milc_200x200.png?1621511031",
+        "large": "https://assets.coingecko.com/coins/images/15659/large/milc_200x200.png?1621511031",
+        "slug": "media-licensing-token",
+        "price_btc": 0.000006546982615681649,
+        "score": 3
+      }
+    },
+    {
+      "item": {
+        "id": "zoid-pay",
+        "coin_id": 16813,
+        "name": "ZoidPay",
+        "symbol": "ZPAY",
+        "market_cap_rank": 490,
+        "thumb": "https://assets.coingecko.com/coins/images/16813/thumb/zpay.png?1647693485",
+        "small": "https://assets.coingecko.com/coins/images/16813/small/zpay.png?1647693485",
+        "large": "https://assets.coingecko.com/coins/images/16813/large/zpay.png?1647693485",
+        "slug": "zoid-pay",
+        "price_btc": 0.000003885409971962004,
+        "score": 4
+      }
+    },
+    {
+      "item": {
+        "id": "space-id",
+        "coin_id": 29468,
+        "name": "SPACE ID",
+        "symbol": "ID",
+        "market_cap_rank": 168,
+        "thumb": "https://assets.coingecko.com/coins/images/29468/thumb/sid_token_logo_%28green2%29.png?1679454702",
+        "small": "https://assets.coingecko.com/coins/images/29468/small/sid_token_logo_%28green2%29.png?1679454702",
+        "large": "https://assets.coingecko.com/coins/images/29468/large/sid_token_logo_%28green2%29.png?1679454702",
+        "slug": "space-id",
+        "price_btc": 0.000029429496039750337,
+        "score": 5
+      }
+    },
+    {
+      "item": {
+        "id": "radix",
+        "coin_id": 4374,
+        "name": "Radix",
+        "symbol": "XRD",
+        "market_cap_rank": 48,
+        "thumb": "https://assets.coingecko.com/coins/images/4374/thumb/Radix.png?1629701658",
+        "small": "https://assets.coingecko.com/coins/images/4374/small/Radix.png?1629701658",
+        "large": "https://assets.coingecko.com/coins/images/4374/large/Radix.png?1629701658",
+        "slug": "radix",
+        "price_btc": 0.000003853920739846705,
+        "score": 6
+      }
+    }
+  ],
+  "exchanges": []
+}

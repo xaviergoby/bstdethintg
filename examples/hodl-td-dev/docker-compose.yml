@@ -1,0 +1,89 @@
+version: "3.1"
+
+#
+# Hodl Trading Desk
+#
+services:
+    db:
+        image: postgres:15
+        container_name: hodl-td-db.dev
+        restart: unless-stopped
+        networks:
+            - hodl-td-net-be
+        environment:
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_DB=${POSTGRES_DB}
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+            - ./postgres/data:/var/lib/postgresql/data
+
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin
+        restart: unless-stopped
+        networks:
+            - hodl-td-net-be
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL}
+            - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD}
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+            - ./pgadmin:/var/lib/pgadmin
+        ports:
+            - 8082:80
+
+    hodl-td-api:
+        image: registry.gitlab.com/hodl.nl/hodltradingdesk/hodl-td-api:dev
+        container_name: hodl-td-api.dev
+        depends_on:
+            - db
+        restart: unless-stopped
+        networks:
+            - hodl-td-net-fe
+            - hodl-td-net-be
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+            - ./DataProtection-Keys:/root/.aspnet/DataProtection-Keys
+            - ./appsettings.json:/app/appsettings.json
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+
+    hodl-td-fe:
+        image: registry.gitlab.com/hodl.nl/trading-desk-hodl-reactjs/hodl-td-fe:dev
+        container_name: hodl-td-fe.dev
+        networks:
+            - hodl-td-net-fe
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+            - ./config.json:/usr/share/nginx/html/config.json
+        restart: unless-stopped
+
+    nginx:
+        image: linuxserver/nginx:latest
+        container_name: nginx
+        networks:
+            - hodl-td-net-fe
+        environment:
+            - NGINX_HOST=${HOSTNAME}
+            - NGINX_PORT=80
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+            - ./nginx/config:/config
+        ports:
+            - 80:80
+            - 443:443
+        restart: unless-stopped
+
+networks:
+    hodl-td-net-fe:
+        name: hodl-td-net-fe
+        driver: bridge
+    hodl-td-net-be:
+        name: hodl-td-net-be
+        driver: bridge

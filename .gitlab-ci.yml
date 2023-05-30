@@ -1,0 +1,108 @@
+image: mcr.microsoft.com/dotnet/sdk:6.0
+
+services:
+    - name: docker:stable-dind
+
+variables:
+    DOCKER_HOST: tcp://docker:2375/
+    DOCKER_DRIVER: overlay2
+    # See https://github.com/docker-library/docker/pull/166
+    DOCKER_TLS_CERTDIR: ""
+
+stages:
+    - build
+    - test
+    - publish
+    - deploy
+
+build:
+    stage: build
+    tags:
+        - runner-dev
+    script:
+        - "dotnet build --configuration Release"
+    artifacts:
+      paths:
+        - src/Hodl.Api/bin/
+
+test:
+    stage: test
+    tags:
+        - runner-dev
+    script: 
+        - "dotnet test"
+
+publish-dev:
+    stage: publish
+    tags:
+        - runner-dev
+    only: 
+        - dev
+    image: docker:stable
+    artifacts:
+        expire_in: 1 week
+        paths:
+            - ./images/
+    before_script:
+        - mkdir ./images
+    script:
+        - echo "Uploading to registry $CI_REGISTRY"
+        - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
+        - cd ./src
+        - docker build --pull -f ./Dockerfile-staging -t $CI_REGISTRY_IMAGE/hodl-td-api:dev .
+        - docker push $CI_REGISTRY_IMAGE/hodl-td-api:dev
+
+publish-prod:
+    stage: publish
+    tags:
+        - runner-dev
+    only: 
+        - main
+    image: docker:stable
+    artifacts:
+        expire_in: 1 week
+        paths:
+            - ./images/
+    before_script:
+        - mkdir ./images
+    script:
+        - echo "Uploading to registry $CI_REGISTRY"
+        - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
+        - cd ./src
+        - docker build --pull -f ./Dockerfile -t $CI_REGISTRY_IMAGE/hodl-td-api:prod .
+        - docker push $CI_REGISTRY_IMAGE/hodl-td-api:prod
+
+
+deploy-dev:
+    stage: deploy
+    only:
+        - dev
+    tags:
+        - runner-dev
+    image: debian
+    script: 
+        - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY_DEV" | tr -d '\r' | ssh-add -
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+        - ssh-keyscan -t rsa tradingdesk.test.hodl.nl >> ~/.ssh/known_hosts
+        - ssh deploy@tradingdesk.test.hodl.nl "cd /docker/hodl-td && docker compose pull && docker compose up -d"
+
+deploy-prod:
+    stage: deploy
+    only:
+        - main
+    tags:
+        - runner-dev
+    image: debian
+    script: 
+        - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY_PROD" | tr -d '\r' | ssh-add -
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+        - ssh-keyscan -t rsa tradingdesk.hodl.nl >> ~/.ssh/known_hosts
+        - ssh deploy@tradingdesk.hodl.nl "cd /docker/hodl-td && docker compose pull && docker compose up -d"

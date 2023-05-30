@@ -1,0 +1,352 @@
+[
+  {
+    "name": "MEXC Global (Futures) FLUX",
+    "id": "FLUX",
+    "market": "MEXC Global (Futures)",
+    "last": 0.7106,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "ZB (Derivatives) PEOPLE",
+    "id": "PEOPLE",
+    "market": "ZB (Derivatives)",
+    "last": 0.02973,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Bitget Futures THETA",
+    "id": "THETA",
+    "market": "Bitget Futures",
+    "last": 1.18962,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Bitget Futures KNC",
+    "id": "KNC",
+    "market": "Bitget Futures",
+    "last": 0.79366907,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Bibox (Futures) LUNC",
+    "id": "LUNC",
+    "market": "Bibox (Futures)",
+    "last": 0.79366907,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "ZB (Derivatives) FIL",
+    "id": "FIL",
+    "market": "ZB (Derivatives)",
+    "last": 8.39,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Bibox (Futures) LUNA",
+    "id": "LUNA",
+    "market": "Bibox (Futures)",
+    "last": 8.39,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Bibox (Futures) APT",
+    "id": "APT",
+    "market": "Bibox (Futures)",
+    "last": 8.39,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "BingX (Futures) CEL",
+    "id": "CEL",
+    "market": "BingX (Futures)",
+    "last": 0.97023,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Uniswap Index",
+    "id": "UNISWAP",
+    "market": "FTX (Derivatives)",
+    "last": 11475.6335355322,
+    "is_multi_asset_composite": true
+  },
+  {
+    "name": "Bonfida Token",
+    "id": "FIDA",
+    "market": "FTX (Derivatives)",
+    "last": 0.21041141889,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Holo",
+    "id": "HOT",
+    "market": "FTX (Derivatives)",
+    "last": 0.0014578270524,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Mina Protocol",
+    "id": "MINA",
+    "market": "FTX (Derivatives)",
+    "last": 0.579667080933333,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "MobileCoin",
+    "id": "MOB",
+    "market": "FTX (Derivatives)",
+    "last": 0.559925,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Compound Token",
+    "id": "COMP",
+    "market": "FTX (Derivatives)",
+    "last": 33.980794338,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "MEXC Global (Futures) PIT",
+    "id": "PIT",
+    "market": "MEXC Global (Futures)",
+    "last": 5.05e-10,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Perpetual Protocol BNB",
+    "id": "BNB",
+    "market": "Perpetual Protocol",
+    "last": 344.485207525057,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "MEXC Global (Futures) ENJ",
+    "id": "ENJ",
+    "market": "MEXC Global (Futures)",
+    "last": 0.4572,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Ethereum Classic",
+    "id": "ETC",
+    "market": "FTX (Derivatives)",
+    "last": 18.3594577036667,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Polkadot",
+    "id": "DOT",
+    "market": "FTX (Derivatives)",
+    "last": 5.51721182923627,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Perpetual",
+    "id": "PERP",
+    "market": "FTX (Derivatives)",
+    "last": 0.32175,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "MEXC Global (Futures) KAVA",
+    "id": "KAVA",
+    "market": "MEXC Global (Futures)",
+    "last": 0.9461,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Axie Infinity",
+    "id": "AXS",
+    "market": "FTX (Derivatives)",
+    "last": 5.99571021539511,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Balancer",
+    "id": "BAL",
+    "market": "FTX (Derivatives)",
+    "last": 4.7563578860124,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Bitcoin",
+    "id": "BTC",
+    "market": "FTX (Derivatives)",
+    "last": 15683.2070066667,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Huobi Futures XLM",
+    "id": "XLM",
+    "market": "Huobi Futures",
+    "last": 0.0749656426833333,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Deepcoin (Derivatives) C98",
+    "id": "C98",
+    "market": "Deepcoin (Derivatives)",
+    "last": 0.23280609,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": ".DEROSEUSDT",
+    "id": "DEROSEUSDT",
+    "market": "Delta Exchange (Futures)",
+    "last": 0.04659,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "MEXC Global (Futures) IMX",
+    "id": "IMX",
+    "market": "MEXC Global (Futures)",
+    "last": 1.1583,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "MEXC Global (Futures) FET",
+    "id": "FET",
+    "market": "MEXC Global (Futures)",
+    "last": 0.4246,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "dYdX",
+    "id": "DYDX",
+    "market": "FTX (Derivatives)",
+    "last": 1.4675642368632,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Chainlink",
+    "id": "LINK",
+    "market": "FTX (Derivatives)",
+    "last": 6.19549465133676,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "dYdX Perpetual SNX",
+    "id": "SNX",
+    "market": "dYdX Perpetual",
+    "last": 2.976,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "BigONE Futures BTC",
+    "id": "BTC",
+    "market": "BigONE Futures",
+    "last": 30297.53,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Poloniex Futures AVAX",
+    "id": "AVAX",
+    "market": "Poloniex Futures",
+    "last": 21.38,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Stormgain Futures LINK",
+    "id": "LINK",
+    "market": "Stormgain Futures",
+    "last": 8.748,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "BitMEX (Derivative) BMEX",
+    "id": "BMEX",
+    "market": "BitMEX (Derivative)",
+    "last": 0,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Poloniex Futures APT",
+    "id": "APT",
+    "market": "Poloniex Futures",
+    "last": 12.619,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Bitget Futures ETH",
+    "id": "ETH",
+    "market": "Bitget Futures",
+    "last": 2111.105588,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "dYdX Perpetual MKR",
+    "id": "MKR",
+    "market": "dYdX Perpetual",
+    "last": 793.69,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "dYdX Perpetual ZEC",
+    "id": "ZEC",
+    "market": "dYdX Perpetual",
+    "last": 42.859,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "dYdX Perpetual XMR",
+    "id": "XMR",
+    "market": "dYdX Perpetual",
+    "last": 161.948,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Kraken Futures rr_ethusd",
+    "id": "KrakenFutures-rr_ethusd",
+    "market": "Kraken (Futures)",
+    "last": 2112.82,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Kraken Futures ",
+    "id": "KrakenFutures-",
+    "market": "Kraken (Futures)",
+    "last": 296.14,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "MCDEX USD",
+    "id": "USD",
+    "market": "MCDEX (Arbitrum)",
+    "last": 296.14,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Bybit (Futures) ONT",
+    "id": "ONT",
+    "market": "Bybit (Futures)",
+    "last": 0.2849,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Bybit (Futures) ARPA",
+    "id": "ARPA",
+    "market": "Bybit (Futures)",
+    "last": 0.04635,
+    "is_multi_asset_composite": null
+  },
+  {
+    "name": "Deepcoin (Derivatives) ROSE",
+    "id": "ROSE",
+    "market": "Deepcoin (Derivatives)",
+    "last": 0.04499636,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Prime XBT SHIB",
+    "id": "SHIB",
+    "market": "Prime XBT",
+    "last": 0.04499636,
+    "is_multi_asset_composite": false
+  },
+  {
+    "name": "Deribit BCH",
+    "id": "BCH",
+    "market": "Deribit",
+    "last": 133.85,
+    "is_multi_asset_composite": false
+  }
+]

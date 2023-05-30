@@ -1,0 +1,227 @@
+{
+  "name": "Stellar",
+  "tickers": [
+    {
+      "base": "XLM",
+      "target": "USDT",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false
+      },
+      "last": 0.1056,
+      "volume": 33412806.327651516,
+      "converted_last": {
+        "btc": 0.00000349,
+        "eth": 0.00004976,
+        "usd": 0.105466
+      },
+      "converted_volume": {
+        "btc": 116.48,
+        "eth": 1663,
+        "usd": 3523928
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.094607,
+      "timestamp": "2023-04-18T11:48:38+00:00",
+      "last_traded_at": "2023-04-18T11:48:38+00:00",
+      "last_fetch_at": "2023-04-18T11:48:38+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/XLM_USDT?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "stellar",
+      "target_coin_id": "tether"
+    },
+    {
+      "base": "XLM",
+      "target": "BTC",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false
+      },
+      "last": 0.00000348,
+      "volume": 6901327.67816092,
+      "converted_last": {
+        "btc": 0.00000348,
+        "eth": 0.0000497,
+        "usd": 0.105325
+      },
+      "converted_volume": {
+        "btc": 24.01662,
+        "eth": 342.994,
+        "usd": 726881
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.285714,
+      "timestamp": "2023-04-18T11:53:04+00:00",
+      "last_traded_at": "2023-04-18T11:53:04+00:00",
+      "last_fetch_at": "2023-04-18T11:53:04+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/XLM_BTC?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "stellar",
+      "target_coin_id": "bitcoin"
+    },
+    {
+      "base": "XLM",
+      "target": "BUSD",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false
+      },
+      "last": 0.1057,
+      "volume": 7191338.713339641,
+      "converted_last": {
+        "btc": 0.00000349,
+        "eth": 0.00004979,
+        "usd": 0.105518
+      },
+      "converted_volume": {
+        "btc": 25.081965,
+        "eth": 358.051,
+        "usd": 758815
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.094607,
+      "timestamp": "2023-04-18T11:48:44+00:00",
+      "last_traded_at": "2023-04-18T11:48:44+00:00",
+      "last_fetch_at": "2023-04-18T11:48:44+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/XLM_BUSD?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "stellar",
+      "target_coin_id": "binance-usd"
+    },
+    {
+      "base": "XLM",
+      "target": "EUR",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false
+      },
+      "last": 0.0966,
+      "volume": 847242.3322981367,
+      "converted_last": {
+        "btc": 0.0000035,
+        "eth": 0.00005002,
+        "usd": 0.105987
+      },
+      "converted_volume": {
+        "btc": 2.96651,
+        "eth": 42.381391,
+        "usd": 89797
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.103413,
+      "timestamp": "2023-04-18T11:56:53+00:00",
+      "last_traded_at": "2023-04-18T11:56:53+00:00",
+      "last_fetch_at": "2023-04-18T11:56:53+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/XLM_EUR?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "stellar"
+    },
+    {
+      "base": "XLM",
+      "target": "TRY",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false
+      },
+      "last": 2.141,
+      "volume": 836996.6679121905,
+      "converted_last": {
+        "btc": 0.00000365,
+        "eth": 0.00005205,
+        "usd": 0.110381
+      },
+      "converted_volume": {
+        "btc": 3.05338,
+        "eth": 43.56865,
+        "usd": 92388
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.046664,
+      "timestamp": "2023-04-18T11:46:44+00:00",
+      "last_traded_at": "2023-04-18T11:46:44+00:00",
+      "last_fetch_at": "2023-04-18T11:46:44+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/XLM_TRY?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "stellar"
+    },
+    {
+      "base": "XLM",
+      "target": "ETH",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false
+      },
+      "last": 0.0000499,
+      "volume": 577654.5711422845,
+      "converted_last": {
+        "btc": 0.00000349,
+        "eth": 0.00004982,
+        "usd": 0.105582
+      },
+      "converted_volume": {
+        "btc": 2.015153,
+        "eth": 28.779497,
+        "usd": 60990
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.200401,
+      "timestamp": "2023-04-18T11:53:05+00:00",
+      "last_traded_at": "2023-04-18T11:53:05+00:00",
+      "last_fetch_at": "2023-04-18T11:53:05+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/XLM_ETH?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "stellar",
+      "target_coin_id": "ethereum"
+    },
+    {
+      "base": "XLM",
+      "target": "BNB",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false
+      },
+      "last": 0.0003056,
+      "volume": 422528.74083769636,
+      "converted_last": {
+        "btc": 0.00000351,
+        "eth": 0.00005004,
+        "usd": 0.106045
+      },
+      "converted_volume": {
+        "btc": 1.481061,
+        "eth": 21.142512,
+        "usd": 44807
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.130847,
+      "timestamp": "2023-04-18T11:48:37+00:00",
+      "last_traded_at": "2023-04-18T11:48:37+00:00",
+      "last_fetch_at": "2023-04-18T11:48:37+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/XLM_BNB?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "stellar",
+      "target_coin_id": "binancecoin"
+    }
+  ]
+}

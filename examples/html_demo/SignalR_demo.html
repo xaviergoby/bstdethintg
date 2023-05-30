@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SignalR demo</title>
+    <!--Referencing the SignalR library. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.js"></script>
+</head>
+<body>
+
+    <!-- HTML Body -->
+    <h1>HODL's TradingDesk SignalR Client Side Demo & Prototyping </h1>
+
+    <div class="container">
+        <span style="font-size: xx-large">Notification:</span>
+        <span id="notification" style="font-size: xx-large; margin: 25px 0px 25px 25px;"> [N.A.] </span>
+    </div>
+
+    <div>
+        <span style="font-size: xx-large">Connection</span>
+        <button id="connectionButton" onclick="connectSignalR()" style="padding: 1rem 2rem; border-radius: 5px; margin: 25px 0px 25px 25px; background-color: gray">DISCONNECTED</button>
+    </div>
+
+
+<!-- SignalR Java Script code-->
+<script>
+
+    const options = {
+        accessTokenFactory: () => "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZjhkYmRhOS0xYzRmLTQzOGUtOGZjZi0wMmFmYmNkMzVmMWQiLCJqdGkiOiJhMmVjNWZhMC05ZTZiLTRkMWMtOWI5Zi05ODQzNWEwMDU3YWYiLCJtZmEiOiJtZmEiLCJpYXQiOjE2NzYwMzE0OTgsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjc2MDMxNDk4LCJleHAiOjE2NzYwMzUwOTgsImlzcyI6Imlzc3VlciIsImF1ZCI6ImF1ZGllbmNlIn0.ddgAheIi6rl1L-UHK7-95qi4vfl8TlmsfNseGAi-XsA"
+    };
+
+     //SignalR Client Side Connection
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("https://localhost:7217/signalr/notification", options)
+        .withAutomaticReconnect()
+        .configureLogging(signalR.LogLevel.Information)
+        .build();
+
+    connection.on("Notification", (notificationId, notificationMessage) => {
+        console.log(`SignalR notification id: ${notificationId}`)
+        console.log(`SignalR notification message: ${notificationMessage}`)
+        const notifElement = document.getElementById("notification");
+        notifElement.innerHTML = notificationMessage;
+        notifElement.style.color = "red";
+    });
+
+    const connectSignalR = async function () {
+        const connectionButtonState = document.getElementById("connectionButton");
+
+        if (connection.state === signalR.HubConnectionState.Disconnected) {
+
+            connection
+                .start()
+                .then(() => {
+                    console.assert(connection.state === signalR.HubConnectionState.Connected);
+                    console.log("SignalR is connected!");
+                    connectionButtonState.innerHTML = "CONNECTED";
+                    connectionButtonState.style.background = "green";
+                })
+                .catch((err) => {
+                    console.error("Unable to connect to SignalR!")
+                    console.log(err);
+                });
+        } else {
+            connection
+                .stop()
+                .then(() => {
+                    console.assert(connection.state === signalR.HubConnectionState.Disconnected);
+                    console.log("SignalR is disconnected!");
+                    connectionButtonState.innerHTML = "DISCONNECTED";
+                    connectionButtonState.style.background = "gray";
+                })
+                .catch((err) => {
+                    console.error("Unable to disconnect from SignalR!")
+                    console.log(err);
+                });
+        }
+    };
+</script>
+</body>
+</html>
